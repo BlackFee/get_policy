@@ -178,7 +178,7 @@ def run_spider_policy():
 
 
 if __name__ == '__main__':
-	date_start=datetime.datetime.now()
+    date_start=datetime.datetime.now()
     data=run_spider_policy()
     rules=data["all_rules"]
     applyTo=data["all_applys"]
@@ -202,4 +202,4 @@ if __name__ == '__main__':
     print("爬取结果已存储至%s文件内"%filename)
     date_end=datetime.datetime.now()
     print("本次爬行用时（时-分-秒）：")
-	print(date_end-date_start)
+    print(date_end-date_start)
