@@ -15,8 +15,8 @@ class Settings():
             'Upgrade-Insecure-Requests': '1',
         }
         self.cookies={
-            "JSESSIONID":"11111111111111111111111111111111111111",
-            "SSOSESSIONID":"11111111111111111111111111111111111111"
+            "JSESSIONID":"0DCC90AD2C39FC464B43A65A3F846390",
+            "SSOSESSIONID":"0DCC90AD2C39FC464B43A65A3F846390"
         }
 class Policies():
     def __init__(self):
