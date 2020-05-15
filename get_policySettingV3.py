@@ -119,11 +119,12 @@ def get_rules(policiesName,policyName,policy_detail):
 #获取策略所应用的站点
 def get_applyTo(policiesName,policyName,policy_detail):
     data_apply=pd.DataFrame()
-    apply_list=policy_detail["applyTo"]
-    for p in apply_list:
-        data_apply=data_apply.append(p,ignore_index=True)
-    data_apply["policiesName"]=policiesName
-    data_apply["policyName"]=policyName
+    if "applyTo" in policy_detail.keys():
+        apply_list=policy_detail["applyTo"]
+        for p in apply_list:
+            data_apply=data_apply.append(p,ignore_index=True)
+        data_apply["policiesName"]=policiesName
+        data_apply["policyName"]=policyName
     return data_apply
 
 #爬取单个策略类型的所需策略详细信息
